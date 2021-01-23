@@ -24,6 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
@@ -32,10 +33,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   
 }
 
 .card {
+  transform-style: preserve-3d;
   min-height: 80vh;
   width: 50%;
   border-radius: 30px;
@@ -49,14 +52,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.75s ease-out;
   /* background-color: lightcoral; */
 
 }
-.sneaker .dot {
-  /* width: 20rem; */
-  height: 5rem;
-  width: 5rem;
-  background-color: rgb(173, 35, 35);
+.sneaker img {
+  width: 20rem;
+  /* height: 5rem;
+  width: 5rem; */
+  /* background-color: rgb(173, 35, 35); */
+  transition: all 0.75s ease-out;
   z-index: 2;
 }
 
@@ -75,6 +80,7 @@ body {
 
 .info h1 {
   font-size: 3rem;
+  transition: all 0.75s ease-out;
 }
 
 .info h3 {
@@ -82,11 +88,13 @@ body {
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
+  transition: all 0.75s ease-out;
 }
 
 .sizes {
   display: flex;
   justify-content: space-between;
+  transition: all 0.75s ease-out;
 }
 
 .sizes button {
@@ -110,6 +118,7 @@ button.active {
 }
 .purchase {
   margin-top: 2rem;
+  transition: all 0.75s ease-out;
 }
 
 .purchase button {
@@ -122,4 +131,18 @@ button.active {
   border-radius: 30px;
   font-weight: bolder;
 
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+    image-rendering: auto;
+  }
 }
