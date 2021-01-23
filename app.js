@@ -15,6 +15,12 @@ container.addEventListener('mousemove', function(e) {
   let yAxis = (window.innerHeight / 2 - e.pageY) /25;
   card.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
 });
+
+container.addEventListener('touchmove', function(e) {
+  let xAxis = (window.innerWidth / 2 - e.pageX) /25;
+  let yAxis = (window.innerHeight / 2 - e.pageY) /25;
+  card.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+});
 //Animate In
 container.addEventListener('mouseenter', e => {
   card.style.transition = "none";
